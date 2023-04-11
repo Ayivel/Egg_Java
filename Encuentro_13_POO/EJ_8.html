@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>EJ_8.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.string {color: #6a8759}
+.number {color: #6897bb}
+.ST0 {color: #808080; font-family: monospace; font-weight: bold}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST1 {color: #ffc66d; font-family: monospace; font-style: italic}
+.ST2 {color: #9876aa; font-family: monospace; font-style: italic}
+.literal {color: #cc7832}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">D:\Documents\Egg\2nd Guide\src\pkg2nd\guide\EJ_8.java</td></tr></table>
+<pre>
+ 1 <span class="comment">/*</span>
+ 2 <span class="comment"> * Dibujar un cuadrado de N elementos por lado utilizando el carácter “*”. Por ejemplo, si el cuadrado tiene </span>
+ 3 <span class="comment">4 elementos por lado se deberá dibujar lo siguiente:</span>
+ 4 <span class="comment">* * * *</span>
+ 5 <span class="comment">*        *</span>
+ 6 <span class="comment">*        *</span>
+ 7 <span class="comment">* * * *</span>
+ 8 
+ 9 <span class="comment"> */</span>
+10 <span class="literal">package</span> pkg2nd.guide;
+11 
+12 <span class="literal">import</span> java.util.Scanner;
+13 
+14 <span class="comment">/**</span>
+15 <span class="comment"> *</span>
+16 <span class="comment"> * </span><span class="ST0">@author</span> <span class="comment">ariel</span>
+17  <span class="comment">*/</span>
+18 <span class="literal">public</span> <span class="literal">class</span> EJ_8 {
+19 
+20     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">main</span>(String[] args) {
+21         System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">Por favor, ingrese el tamanio del cuadrado. Tiene que ser un numero par</span><span class="string">&quot;</span>);
+22         Scanner read = <span class="literal">new</span> Scanner(System.<span class="ST2">in</span>);
+23         <span class="literal">int</span> size = read.nextInt();
+24 
+25         <span class="literal">if</span> (size % <span class="number">2</span> != <span class="number">0</span>) {
+26             <span class="literal">do</span> {
+27                 System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">Por favor ingrese un tamanio par</span><span class="string">&quot;</span>);
+28                 size = read.nextInt();
+29             } <span class="literal">while</span> (size % <span class="number">2</span> != <span class="number">0</span>);
+30         }
+31 
+32         <span class="comment">//Hasta ahora lo que se hace es ingresar el size del cuadrado</span>
+33         System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">El cuadrado de tamanio </span><span class="string">&quot;</span> + size + <span class="string">&quot;</span><span class="string"> es</span><span class="string">&quot;</span>);
+34         <span class="literal">for</span> (<span class="literal">int</span> i = <span class="number">0</span>; i &lt; size; i++) {
+35             <span class="literal">for</span> (<span class="literal">int</span> j = <span class="number">0</span>; j &lt; size; j++) {
+36                 <span class="literal">if</span> (i &gt; <span class="number">0</span> &amp;&amp; i &lt; size - <span class="number">1</span> &amp;&amp; j &gt; <span class="number">0</span> &amp;&amp; j &lt; size - <span class="number">1</span>) {
+37                     System.<span class="ST2">out</span>.print(<span class="string">&quot;</span>   <span class="string">&quot;</span>);
+38                 } <span class="literal">else</span> {
+39                     System.<span class="ST2">out</span>.print(<span class="string">&quot;</span><span class="string"> * </span><span class="string">&quot;</span>);
+40                 }
+41 
+42             }
+43             System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">&quot;</span>);
+44         }
+45 
+46     }
+47 }
+48 
+49 <span class="comment">//Para i &lt;- 1 Hasta  num Con Paso 1 Hacer</span>
+50 <span class="comment">//              Para j &lt;- 1 Hasta num Con Paso 1 Hacer</span>
+51 <span class="comment">//                      si (i = 1) o (i = num) Entonces</span>
+52 <span class="comment">//                              Escribir sin saltar  &quot;*&quot; </span>
+53 <span class="comment">//                      sino</span>
+54 <span class="comment">//                              si j = 1 o j = (num - 1) Entonces</span>
+55 <span class="comment">//                                      Escribir sin saltar   &quot;*&quot; </span>
+56 <span class="comment">//                              FinSi</span>
+57 <span class="comment">//                              escribir sin saltar &quot; &quot;</span>
+58 <span class="comment">//                              </span>
+59 <span class="comment">//                      FinSi</span>
+60 <span class="comment">//                      </span>
+61 <span class="comment">//              Fin Para</span>
+62 <span class="comment">//              Escribir &quot; &quot;</span>
+63 <span class="comment">//      Fin Para</span>
+64 
+</pre></body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>GitApuntes.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #282a36; font-family: Hack NF}
+pre {color: #a9b7c6; background-color: #282a36; font-family: Hack NF}
+table {color: #888888; background-color: #313335; font-family: Hack NF}
+.ST0 {color: #287bde}
+.whitespace {color: #505050}
+.separator {color: #c0c0c0}
+.comment {color: #00cc33}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">E:\CursoJava\VariasPruebas\src\GitApuntes\GitApuntes.java</td></tr></table>
+<pre>
+ 1     
+ 2     <span class="comment">//////// USO Y COMANDOS DE GIT - PASOS.../////////</span>
+ 3     
+ 4     <span class="comment">// 1.- REGISTRARSE Y LOGUEARSE EN GIT.</span>
+ 5     <span class="comment">// 2.- CREAR UN REPOSITORIO REMOTO PUEDE SER PUBLICO O PRIVADO Y LE DAMOS CREAR.</span>
+ 6     <span class="comment">// 3.- COPIAR LINK DE VINCULACION DEL REPOSITORIO.</span>
+ 7     <span class="comment">// 4.- BUSCAR EL PROYECTO EN FORMA LOCAL (TU DISCO) CLIC DERECHO (GIT BASH HERE), SE ABRIRA UNA CONSOLA (TERMINAL)</span>
+ 8     <span class="comment">// 5.- ESCRIBIR EN CONSOLA git init ESTE COMANDO INICIALIZARA EL REPOSITORIO EN FORMA LOCAL</span>
+ 9     <span class="comment">// 6.- ESCRIBIR EN TERMINAL git remote add origin y pegamos el link previamente copiado </span><span class="ST0">https://github.com/btocarmona2021/git.git</span>
+10 <span class="separator">}</span>   <span class="comment">// 7.- OPCIONAL CORROBORAR  git remote -v</span>
+11     <span class="comment">// 8.- PODEMOS CONFIGURAR NUESTRA PC PARA SABER QUIEN PUBLICA EN GIT PARA ELLO PODEMOS USAR LOS COMANDOS git congif -l para ver la config</span>
+12     <span class="comment">// (Q) PARA SALIR DEL PREVIEW, PODEMOS USAR clear PARA LIMPIAR LA TERMINAL</span>
+13     <span class="comment">//9.- PARA CONFIGURAR EL NOMBRE DE USUARIO DEL REPOSITORIO USAMOS git config --global user.name &quot;Tu Nombre&quot;</span>
+14     <span class="comment">//10.-PARA CONFIGURAR EL E-MAIL ES SIMILAR $ git config --global user.email &quot;tucorreo@tucorreo.com&quot;</span>
+15     <span class="comment">//11.-PODEMOS CORROBORAR SI QUEDO BIEN CON EL COMANDO git config -l</span>
+16     <span class="comment">//12.-USANDO git status VAMOS A PODER VER TODAS LAS COSAS NUEVAS QUE NO HEMOS REMOTEADO Y LAS QUE AUN NO HEMOS HECHO COMMIT</span>
+17     <span class="comment">//13.-USAMOS COMANDO git add . PARA AGREGAR A COMMIT LAS COSAS QUE AUN NO HAN SIDO REMOTEADAS</span>
+18     <span class="comment">//14.-USAMOS git commit -m &quot;Version 01&quot; PARA HACER COMMIT DE TODO, PODEMOS USAR git status PARA VERIFICAR</span>
+19     <span class="comment">//15.-AHORA PARA ENVIAR NUESTRO REPOSITORIO AL REMOTO USAMOS git push origin master</span>
+20     <span class="comment">//16.-CON EL COMANDO git log PODEMOS VER TODOS LOS COMMIT(HISTORIAL) QUE HEMOS REALIZADO DE NUESTRO REPOSITORIO</span>
+21     <span class="comment">///////////MOVERSE ENTRE DIFERENTES COMMIT///////</span>
+22     <span class="comment">//01.-COPIAR EL CODIGO DEL COMMIT AL QUE QUEREMOS REGRESA EL CODIGONOS MUESTRA DESPUES DE VER EL LOG</span>
+23     <span class="comment">//02.-ESCRIBIMOS EN TERMINAL git checkout y pegamos el codigo 8e56247309992defebcda4e114c29cb6c66d238a</span>
+24     <span class="comment">//03.-PARA DESCARTAR ESOS CAMBIOS PODEMOS USAR git checkout -- .</span>
+25     <span class="comment">//04.-USAMOS git ckeckout master PARA VOLVER A LA CABECERA</span>
+26     <span class="comment">//05.- CON EL COMANDO git branch -a NOS MUESTRA TODAS LAS RAMAS EXISTENTES TANTO LOCAL COMO REMOTA PERO PRIMERAMENTE USAMOS git fetch</span>
+27     <span class="comment">////////CREAR UNA RAMA DESDE EL REPOSITORIO LOCAL///////</span>
+28     <span class="comment">//01.- PARA CAMBIAR DE RAMA USAMOS EL COMANDO git checkout develop</span>
+29     <span class="comment">//02.- PARA CREAR LA RAMA USAMOS EL COMANDO git branch nuevarama/agustin/login CREAR RAMA NO SOBRE EL NOMBRE SI NO SOBRE LA TAREA A REALIZAR</span>
+30     <span class="comment">//03.- PARA POSICIONARME EN LA RAMA LOCAL DEBO ESCRIBIR git checkout nuevarama/agustin/login y damos enter</span>
+31     <span class="comment">//04.- Y FINALMENTE LE DAMOS git push origin nuevarama/agustin/login y damos enter</span>
+32     <span class="comment">//17.-CON EL COMANDO git diff NOS MUESTRA LAS DIFERENCIAS O LO NUEVO POR CARGAR</span>
+33 
+34 <span class="comment">////////////////REPASO DE COAMNDOS////////////////</span>
+35 <span class="comment">//git init NOS PERMITE INICIALIZAR UN REPOSITORIO EN FORMA LOCAL</span>
+36 <span class="comment">//git status NOS PERMITE VER LOS CAMBIOS QUE SE HAN PRODUCIDO Y VER QUE QUEREMOS COMMITEAR</span>
+37 <span class="comment">//git remote PARA AÑADIR O VON -v PARA LA VERSION BAJO LA CUAL ESTAMOS VINCULADOS</span>
+38 <span class="comment">//git diff PERMITE VER LAS DIFERENCIAS</span>
+39 <span class="comment">//git push PARA EMPUJAR O ENVIAR REMOTAMENTE TODO Y git pull PARA TRAER DEL REMOTO A LOCAL</span>
+40 <span class="comment">//git checlout PARA SALTAR ENTRE RAMAS O ENTRE VERSIONES </span>
+41 <span class="comment">//git log PARA VER EL HISTORIAL PARA SALIR DE ESA CONSOLA PODEMOS USAR Q</span>
+42 <span class="comment">//PARA CONFIGURACION GLOBAL git config --global user.name &quot;Tu Nombre&quot; Y git config --global user.email &quot;tucorreo@tucorreo.com&quot;</span>
+43 <span class="comment">//git config -l PARA VER LA CONFIGURACION GLOBAL</span>
+44 <span class="comment">//git commit PARA ACTUALIZAR EL COMMIT</span>
+45 <span class="comment">//git--help MUESTRA LA AYUDA DE GIT</span>
+46 
+47 
+48 
+49 
+50     
+</pre></body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Circunferencia.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.number {color: #6897bb}
+.string {color: #6a8759}
+.ST2 {color: #9876aa}
+.ST3 {color: #ffc66d}
+.ST1 {color: #808080; font-family: monospace; font-weight: bold}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST4 {color: #9876aa; font-family: monospace; font-style: italic}
+.ST0 {color: #287bde}
+.literal {color: #cc7832}
+.ST5 {font-family: monospace; font-style: italic}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">D:\Documents\Egg\Encuentro_13_POO\src\Entities\Circunferencia.java</td></tr></table>
+<pre>
+ 1 <span class="comment">/*</span>
+ 2 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</span><span class="comment"> to change this license</span>
+ 3 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</span><span class="comment"> to edit this template</span>
+ 4 <span class="comment"> */</span>
+ 5 <span class="literal">package</span> Entities;
+ 6 
+ 7 <span class="literal">import</span> java.lang.Math;
+ 8 
+ 9 <span class="comment">/**</span>
+10 <span class="comment"> *</span>
+11 <span class="comment"> * </span><span class="ST1">@author</span> <span class="comment">ariel</span> <span class="comment">Declarar</span> <span class="comment">una</span> <span class="comment">clase</span> <span class="comment">llamada</span> <span class="comment">Circunferencia</span> <span class="comment">que</span> <span class="comment">tenga</span> <span class="comment">como</span>
+12 <span class="comment"> * </span><span class="comment">atributo</span> <span class="comment">privado</span> <span class="comment">el</span> <span class="comment">radio</span> <span class="comment">de</span> <span class="comment">tipo</span> <span class="comment">real</span><span class="comment">.</span> <span class="comment">A</span> <span class="comment">continuación</span><span class="comment">, </span><span class="comment">se</span> <span class="comment">deben</span> <span class="comment">crear</span> <span class="comment">los</span>
+13 <span class="comment"> * </span><span class="comment">siguientes</span> <span class="comment">métodos</span><span class="comment">: </span><span class="comment">Método</span> <span class="comment">constructor</span> <span class="comment">que</span> <span class="comment">inicialice</span> <span class="comment">el</span> <span class="comment">radio</span> <span class="comment">pasado</span> <span class="comment">como</span>
+14 <span class="comment"> * </span><span class="comment">parámetro</span><span class="comment">.</span> <span class="comment">Métodos</span> <span class="comment">get</span> <span class="comment">y</span> <span class="comment">set</span> <span class="comment">para</span> <span class="comment">el</span> <span class="comment">atributo</span> <span class="comment">radio</span> <span class="comment">de</span> <span class="comment">la</span> <span class="comment">clase</span>
+15 <span class="comment"> * </span><span class="comment">Circunferencia</span><span class="comment">.</span> <span class="comment">Método</span> <span class="comment">para</span> <span class="comment">crearCircunferencia</span><span class="comment">(): </span><span class="comment">que</span> <span class="comment">le</span> <span class="comment">pide</span> <span class="comment">el</span> <span class="comment">radio</span> <span class="comment">y</span> <span class="comment">lo</span>
+16 <span class="comment"> * </span><span class="comment">guarda</span> <span class="comment">en</span> <span class="comment">el</span> <span class="comment">atributo</span> <span class="comment">del</span> <span class="comment">objeto</span><span class="comment">.</span> <span class="comment">Método</span> <span class="comment">area</span><span class="comment">(): </span><span class="comment">para</span> <span class="comment">calcular</span> <span class="comment">el</span> <span class="comment">área</span> <span class="comment">de</span> <span class="comment">la</span>
+17 <span class="comment"> * </span><span class="comment">circunferencia</span><span class="comment"> (</span><span class="comment">Area</span><span class="comment">=〖</span><span class="comment">π</span><span class="comment">*</span><span class="comment">radio</span><span class="comment">〗^2)</span><span class="comment">.</span> <span class="comment">Método</span> <span class="comment">perimetro</span><span class="comment">(): </span><span class="comment">para</span> <span class="comment">calcular</span> <span class="comment">el</span>
+18 <span class="comment"> * </span><span class="comment">perímetro</span><span class="comment"> (</span><span class="comment">Perimetro</span><span class="comment">=2*</span><span class="comment">π</span><span class="comment">*</span><span class="comment">radio</span><span class="comment">)</span><span class="comment">.</span>
+19  <span class="comment">*/</span>
+20 <span class="literal">public</span> <span class="literal">class</span> Circunferencia {
+21 
+22     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">radio</span>;
+23 
+24     <span class="literal">public</span> Circunferencia(<span class="literal">double</span> radio) {
+25         <span class="literal">this</span>.<span class="ST2">radio</span> = radio;
+26     }
+27 
+28     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getRadio</span>() {
+29         <span class="literal">return</span> <span class="ST2">radio</span>;
+30     }
+31 
+32     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setRadio</span>(<span class="literal">double</span> radio) {
+33         <span class="literal">this</span>.<span class="ST2">radio</span> = radio;
+34     }
+35 
+36     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">crearCircunferencia</span>(<span class="literal">double</span> radio) {
+37         <span class="literal">this</span>.<span class="ST2">radio</span> = radio;
+38     }
+39 
+40     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">area</span>(<span class="literal">double</span> radio) {
+41         <span class="literal">float</span> area;
+42         area =  (<span class="literal">float</span>) (Math.<span class="ST4">PI</span> *Math.<span class="ST5">pow</span>(radio,<span class="number">2</span>));
+43         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">El area es </span><span class="string">&quot;</span> + area);
+44         
+45     }
+46     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">perimetro</span>(<span class="literal">double</span> radio){
+47     <span class="literal">float</span> perimetro;
+48     perimetro=(<span class="literal">float</span>) (<span class="number">2</span>*Math.<span class="ST4">PI</span>*radio);
+49         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">El perimetro es </span><span class="string">&quot;</span>+ perimetro);
+50     }
+51 
+52 }
+53 
+</pre></body>
+</html>

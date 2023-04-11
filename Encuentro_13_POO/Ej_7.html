@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Ej_7.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.number {color: #6897bb}
+.string {color: #6a8759}
+.ST0 {color: #808080; font-family: monospace; font-weight: bold}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST1 {color: #ffc66d; font-family: monospace; font-style: italic}
+.ST2 {color: #9876aa; font-family: monospace; font-style: italic}
+.literal {color: #cc7832}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">D:\Documents\Egg\2nd Guide\src\pkg2nd\guide\Ej_7.java</td></tr></table>
+<pre>
+ 1 <span class="comment">/*</span>
+ 2 <span class="comment"> * </span>
+ 3 <span class="comment"> */</span>
+ 4 <span class="literal">package</span> pkg2nd.guide;
+ 5 
+ 6 <span class="literal">import</span> java.util.Scanner;
+ 7 
+ 8 <span class="comment">/**</span>
+ 9 <span class="comment"> *</span>
+10 <span class="comment"> * </span><span class="ST0">@author</span> <span class="comment">ariel</span>
+11  <span class="comment">*/</span>
+12 <span class="literal">public</span> <span class="literal">class</span> Ej_7 {
+13     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST1">main</span>(String[] args) {
+14           Scanner read= <span class="literal">new</span> Scanner(System.<span class="ST2">in</span>);
+15         String codigo;
+16         <span class="literal">int</span> cont=<span class="number">0</span>, cont2=<span class="number">0</span>;
+17         System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese el codigo</span><span class="string">&quot;</span>);
+18         codigo=read.nextLine().toUpperCase();
+19         <span class="literal">while</span> (!codigo.equals(<span class="string">&quot;</span><span class="string">&amp;&amp;&amp;&amp;&amp;</span><span class="string">&quot;</span>)) {
+20             <span class="literal">if</span> (codigo.length() == <span class="number">5</span>) {
+21                 <span class="literal">if</span> (codigo.substring(<span class="number">0</span>,<span class="number">1</span>).equals(<span class="string">&quot;</span><span class="string">X</span><span class="string">&quot;</span>) &amp;&amp; codigo.substring(<span class="number">4</span>, <span class="number">5</span>).equals(<span class="string">&quot;</span><span class="string">O</span><span class="string">&quot;</span>)) {
+22                     cont=cont + <span class="number">1</span>;
+23                 }<span class="literal">else</span>{
+24                     cont2=cont2+<span class="number">1</span>;
+25                 }
+26             } <span class="literal">else</span> {
+27                 cont2=cont2+<span class="number">1</span>;
+28             }
+29             System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese el codigo</span><span class="string">&quot;</span>);
+30             codigo=read.nextLine().toUpperCase();
+31         }
+32         System.<span class="ST2">out</span>.println(<span class="string">&quot;</span><span class="string">La cantidad de codigos correctos son </span><span class="string">&quot;</span> + cont +
+33                 <span class="string">&quot;</span><span class="string"> mientras que la cantidad de incorrectos es </span><span class="string">&quot;</span> + cont2);
+34         
+35     }
+36     
+37     }
+38 
+39 
+40 
+</pre></body>
+</html>
